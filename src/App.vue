@@ -5,9 +5,14 @@
     <home :dati="pagina1_data" v-if="isLoaded"></home>
   </section>
 
-    <progetti :Proj="projects" v-if="isProjLoaded"></progetti>
+    <progetti :Proj="projects" v-if="isProjLoaded" data-aos="fade-up"></progetti>
 
-
+  <section>
+    <formazione :school="scuola"></formazione>
+  </section>
+  <section>
+    <social></social>
+  </section>
 
 </template>
 
@@ -20,11 +25,15 @@ import {Persona,Progetti,Istruzione,Esperienza} from './Classi.js';
 
 import home from './view/Pag1.vue';
 import progetti from './view/Progetti.vue';
+import formazione from './view/Formazione.vue';
+import social from './view/Social.vue';
 export default {
   name: 'App',
   components: {
      home,
-     progetti
+     progetti,
+     formazione,
+     social
   },
   data(){
     return{
@@ -32,7 +41,8 @@ export default {
           pagina1_data: {},
           projects:[],
           isProjLoaded:false,
-    }
+          scuola:{},
+    };
 
   },
   mounted(){
@@ -84,21 +94,28 @@ export default {
         let data = await res.json();
         var i = 0;
         await data.forEach(element => {
-          this.projects[i]= new Progetti(element.name,element.language,element.description,element.svn_url);
+          if(element.name!="LorenzoCirelli"){
+            var descrizione = element.description;
+          if(element.description == null || element.description == undefined){
+            descrizione = "Nessuna descrizione fornita";
+          }
+          this.projects[i]= new Progetti(element.name,element.language,descrizione,element.svn_url);
           i++;
+          }
+          
         });
 
       if(this.projects != null){
               this.isProjLoaded=true;
       }
 
+      //pollula informazioni per formazione
+
+      const formazione = new Istruzione(anagrafica.Istruzione.Scuola,anagrafica.Istruzione.Titolo,anagrafica.Istruzione.Valutazione, anagrafica.Istruzione.Specifica);
+      this.scuola=formazione;
     },
 
-   
-
-    
   }
-
 
 }
 </script>
@@ -110,5 +127,3 @@ section{
         height: 100vh;
 }
 </style>
-
-

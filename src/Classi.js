@@ -18,20 +18,13 @@
   };
 
   export class Istruzione{
-    constructor (scuola, titolo, voto){
+    constructor (scuola, titolo, voto, specifica){
       this.scuola =  scuola;
       this.titolo = titolo;
       this.voto = voto;
+      this.specifica = specifica;
     }
   };
 
-  export class Esperienza{
-    constructor(Nome, periodo, mansioni){
-      this.nome = Nome;
-      this.periodo = periodo;
-      this.mansioni = mansioni;
-  }
-
-  }
 
 

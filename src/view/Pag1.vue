@@ -42,7 +42,7 @@ export default{
 </script>
 <style>
 .contenitore{
-    background-image: linear-gradient(315deg, #4659a5 0%, #023047 74%);
+
     position: absolute;
     width: 100%;
     height: 100%;

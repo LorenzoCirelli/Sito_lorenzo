@@ -7,13 +7,8 @@
     "Istruzione":{
             "Scuola":"IIS Ghisleri",
             "Titolo":"Diploma scuola tecnica",
+            "Specifica":"Amministrazione, finanza e marketing, specializzazione in sistemi informativi aziendali",
             "Valutazione":"100/100"
-    },
-    "esperienza":{
-        "Aziende":[
-            {"Nome":"Net4Market",
-            "Periodo":"6 settimane",
-            "Mansioni":"Sviluppatore web"}
-        ]
     }
+
 }
