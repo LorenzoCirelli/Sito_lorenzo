@@ -1,0 +1,19 @@
+{
+    "Anagrafica":{
+        "nome":"Lorenzo",
+        "Cognome":"Cirelli",
+        "compleanno":"03/08/2004"
+    },
+    "Istruzione":{
+            "Scuola":"IIS Ghisleri",
+            "Titolo":"Diploma scuola tecnica",
+            "Valutazione":"100/100"
+    },
+    "esperienza":{
+        "Aziende":[
+            {"Nome":"Net4Market",
+            "Periodo":"6 settimane",
+            "Mansioni":"Sviluppatore web"}
+        ]
+    }
+}
