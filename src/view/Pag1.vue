@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="pz bg1">
-        <img src="../../public/img/jp.png" alt="Concorso masserini">
+        <img src="img/jp.png" alt="Concorso masserini">
     </div>
 </div>
 </template>
