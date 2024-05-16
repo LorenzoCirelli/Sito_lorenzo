@@ -1,8 +1,6 @@
 <template>
-  <div class="gang">test</div>
+  <HomePage></HomePage>
 </template>
-<style lang="scss">
-.gang {
-  background-color: $rosso;
-}
-</style>
+<script lang="ts" setup>
+import HomePage from '@view/HomePage.vue';
+</script>
