@@ -1,5 +1,8 @@
 {
-  "files": [],
+  "compilerOptions": {
+    "module": "NodeNext"
+  },
+  "files": ["auto-imports.d.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
@@ -10,8 +13,5 @@
     {
       "path": "./tsconfig.vitest.json"
     }
-  ],
-  "compilerOptions": {
-    "module": "NodeNext"
-  }
+  ]
 }
