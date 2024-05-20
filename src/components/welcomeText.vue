@@ -1,3 +1,3 @@
 <template>
-    <h1>Benvenuto</h1>
+    <h1>Lorenzo Cirelli</h1>
 </template>

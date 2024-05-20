@@ -1,16 +1,16 @@
 <template>
     <div class="container">
         <component class="container__elem"
-        v-for="i, key in elem1" :key="key" :is="i">
+        v-for="i, key in elems" :key="key" :is="i">
         </component>
     </div>
 </template>
 <script setup lang="ts">
 
 const props = defineProps({
-    elem1: Array<object>,
+    elems: Array<object>,
 })
-console.log(props.elem1);
+console.log(typeof(props.elems));
 </script>
 <style lang="scss" scoped>
 .container {
