@@ -8,7 +8,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     CircleImage: typeof import('./src/components/CircleImage.vue')['default']
-    copy: typeof import('./src/components/polaroidCard copy.vue')['default']
     WelcomeText: typeof import('./src/components/welcomeText.vue')['default']
   }
 }

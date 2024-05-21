@@ -1,11 +1,11 @@
 import { mount } from '@vue/test-utils'
 import PageDivision from '@/layouts/PageDivision.vue'
 import { expect, it } from 'vitest'
-import polaroidCard from '@/components/CircleImage.vue'
+import CircleImage from '@/components/CircleImage.vue'
 
 const wrapper = mount(PageDivision, {
   propsData: {
-    elems: [polaroidCard, polaroidCard]
+    elems: [CircleImage, CircleImage]
   }
 })
 

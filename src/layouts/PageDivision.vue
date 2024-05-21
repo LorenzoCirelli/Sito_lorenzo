@@ -7,10 +7,10 @@
 </template>
 <script setup lang="ts">
 
-const props = defineProps({
+defineProps({
     elems: Array<object>,
 })
-console.log(typeof(props.elems));
+
 </script>
 <style lang="scss" scoped>
 .container {
@@ -23,6 +23,16 @@ console.log(typeof(props.elems));
     text-align: center;
     &__elem{
        flex:1;
+       transform: scale(0.9);
     }
 }
+@media (max-width: 800px) {
+    .container{
+        flex-direction: column;
+            &__elem{
+       flex:1;
+       transform: scale(0.7);
+    }
+    }
+  }
 </style>
