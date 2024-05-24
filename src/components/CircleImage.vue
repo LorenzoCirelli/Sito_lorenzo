@@ -1,10 +1,3 @@
-<template>
-    <div class="center">
-        <div class="card">
-            <div class="card__profile"><img src="../assets/miao.png" alt="Io"></div>
-        </div>
-    </div>
-</template>
 <style lang="scss">
 .card{
     background: radial-gradient($primary, $background);
@@ -23,3 +16,17 @@ img{
     border-radius: 50%;
 }
 </style>
+<template>
+    <Skeletor circle width="50%" height="90%" v-if="Person.isLoading"/>
+    <div class="center" v-else>
+        <div class="card">
+            <div class="card__profile"><img src="../assets/miao.png" alt="Io"></div>
+        </div>
+    </div>
+</template>
+<script setup lang="ts">
+import "vue-skeletor/dist/vue-skeletor.css";
+import { Skeletor } from "vue-skeletor";
+import { usePersonStore } from "@/stores/Person";
+const Person = usePersonStore();
+</script>

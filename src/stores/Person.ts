@@ -3,5 +3,6 @@ import { ref } from 'vue';
 export const usePersonStore = defineStore('Person', ()=> {
   const work = ref("Default");
   const name = ref("Default");
-  return {work, name}
+  const isLoading = true;
+  return {work, name, isLoading}
 })

@@ -1,3 +1,5 @@
+<style lang="scss">
+</style>
 <template>
   <HomePage></HomePage>
 </template>

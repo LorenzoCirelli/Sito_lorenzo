@@ -11,6 +11,9 @@ p{
     font-size: xx-large;
     font-weight: bolder;
 }
+.ragruppa {
+    min-width: 20vh;
+}
 .evidenziato{
     background-color: $primary;
     padding:20px;
@@ -22,13 +25,18 @@ p{
 <template>
     <div class="block">
         <div class="ragruppa">
-            <p>{{ Persona.name }}</p>
-            <p class="evidenziato">Software Dev</p>
+            <Skeletor v-if="Persona.isLoading" v-for="i in 2" :key="i" />
+                <div class="card__profile" v-else>
+                    <p>{{ Persona.name }}</p>
+                    <p class="evidenziato">Software Dev</p>
+                </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import "vue-skeletor/dist/vue-skeletor.css";
+import { Skeletor } from "vue-skeletor";
 import { usePersonStore } from '@/stores/Person'
 const Persona = usePersonStore();
 </script>

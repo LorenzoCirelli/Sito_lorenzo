@@ -13,12 +13,14 @@ const alova = createAlova({
 function compilaDati() {
     const Persona = usePersonStore();
     const githubUsername = import.meta.env.VITE_GITHUB_USER
+    Persona.isLoading = true;
     alova
     .Get(githubUsername)
     .then((response) => response.json())
     .then(data => {
       Persona.work = data.company;
       Persona.name = data.name
+      Persona.isLoading = false;
       console.log(data);
     })
 }
