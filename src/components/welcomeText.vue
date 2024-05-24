@@ -1,11 +1,3 @@
-<template>
-    <div class="block">
-        <div class="ragruppa">
-            <p>Lorenzo Cirelli</p>
-            <p class="evidenziato">Software Dev</p>
-        </div>
-    </div>
-</template>
 <style lang="scss" scoped>
 .block{
     display: flex;
@@ -26,3 +18,17 @@ p{
     box-shadow: rgba($primary, 0.2) 0px 7px 29px 0px;
 }
 </style>
+
+<template>
+    <div class="block">
+        <div class="ragruppa">
+            <p>{{ Persona.name }}</p>
+            <p class="evidenziato">Software Dev</p>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+import { usePersonStore } from '@/stores/Person'
+const Persona = usePersonStore();
+</script>
