@@ -25,8 +25,10 @@ p{
 <template>
     <div class="block">
         <div class="ragruppa">
-            <Skeletor v-if="Persona.isLoading" v-for="i in 2" :key="i" />
-                <div class="card__profile" v-else>
+            <div v-if="Persona.isLoading">
+                <Skeletor v-for="i in 2" :key="i" />
+            </div>
+            <div class="card__profile" v-else>
                     <p>{{ Persona.name }}</p>
                     <p class="evidenziato">Software Dev</p>
                 </div>

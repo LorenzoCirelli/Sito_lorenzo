@@ -17,7 +17,7 @@ img{
 }
 </style>
 <template>
-    <Skeletor circle width="50%" height="90%" v-if="Person.isLoading"/>
+    <Skeletor height="50%" v-if="Person.isLoading"/>
     <div class="center" v-else>
         <div class="card">
             <div class="card__profile"><img src="../assets/miao.png" alt="Io"></div>
