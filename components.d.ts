@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     CircleImage: typeof import('./src/components/CircleImage.vue')['default']
+    LottiPlayer: typeof import('./src/components/lottiPlayer.vue')['default']
     WelcomeText: typeof import('./src/components/welcomeText.vue')['default']
   }
 }

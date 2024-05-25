@@ -16,6 +16,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@dotlottie/player-component": "^2.7.12",
     "alova": "^2.20.5",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",

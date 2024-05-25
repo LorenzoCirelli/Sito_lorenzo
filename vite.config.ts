@@ -10,10 +10,22 @@ import VueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx(), VueDevTools(), Components(), AutoImport({
-    dts:true,
-    imports: ['vue']
-  })],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          // treat all tags with a dash as custom elements
+          isCustomElement: (tag) => tag.includes('-')
+        }
+      }
+    }),
+    vueJsx(),
+    VueDevTools(),
+    Components(),
+    AutoImport({
+      dts: true,
+      imports: ['vue']
+    })],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
