@@ -1,4 +1,4 @@
-<template>
+vh<template>
     <div class="container">
         <component class="container__elem"
         v-for="i, key in elems" :key="key" :is="i">
@@ -16,7 +16,7 @@ defineProps({
 .container {
     background-color: $background;
     width: 100%;
-    height: 100vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,11 +24,14 @@ defineProps({
     &__elem{
        flex:1;
        transform: scale(0.9);
+       margin-left:50px;
+       margin-right:50px;
     }
 }
 @media (max-width: 800px) {
     .container{
         flex-direction: column;
+        min-height: 70vh;
             &__elem{
        flex:1;
        transform: scale(0.7);

@@ -3,7 +3,10 @@
 </template>
 <script lang="ts" setup>
 import PageDivision from '@/layouts/PageDivision.vue'
-import welcomeText from '@/components/welcomeText.vue'
 import CatPlayer from '@/components/CatPlayer.vue';
-const attr: Array<object> = [welcomeText, CatPlayer]
+import LIstPlayer from '@/components/LIstPlayer.vue';
+const attr: Array<object> = [LIstPlayer, CatPlayer]
 </script>
+<style scoped>
+
+</style>
