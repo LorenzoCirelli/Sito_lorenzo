@@ -7,7 +7,9 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    CatPlayer: typeof import('./src/components/CatPlayer.vue')['default']
     CircleImage: typeof import('./src/components/CircleImage.vue')['default']
+    LIstPlayer: typeof import('./src/components/LIstPlayer.vue')['default']
     LottiPlayer: typeof import('./src/components/lottiPlayer.vue')['default']
     WelcomeText: typeof import('./src/components/welcomeText.vue')['default']
   }
