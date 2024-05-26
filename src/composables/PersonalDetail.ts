@@ -1,13 +1,18 @@
 import { createAlova} from 'alova'
 import GlobalFetch from 'alova/GlobalFetch'
 import { usePersonStore } from '@/stores/Person'
+//libreria per calclolo date
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+dayjs.extend(relativeTime);
 
 //instance of alova for connection to github api
 const baseGithubUrl = import.meta.env.VITE_GITHUB_BASE_URL
 const alova = createAlova({
   baseURL: baseGithubUrl,
-  requestAdapter: GlobalFetch(),
+  requestAdapter: GlobalFetch()
 })
+
 
 
 function compilaDati() {
@@ -18,16 +23,25 @@ function compilaDati() {
       .Get(githubUsername, {
         localCache: {
           mode: 'placeholder',
-          expire: 1000 * 60 * 60
+          expire: 500000
         }
       })
       .then((response) => response.json())
       .then((data) => {
-        Persona.work = data.company
+        Persona.job = data.company;
         Persona.name = data.name
+        Persona.location = data.location
         Persona.isLoading = false
         console.log(data)
       })
+      return true;
 }
 
-export default compilaDati
+function dateFrom(from:any) {
+  const workStart = dayjs(from)
+  return (dayjs().from(workStart, true))
+}
+
+const func = {dateFrom, compilaDati}
+
+export default func;

@@ -1,6 +1,5 @@
 <style lang="scss">
 .listElement {
-    list-style-type: none;
   text-align: left;
 }
 </style>

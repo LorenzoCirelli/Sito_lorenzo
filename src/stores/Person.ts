@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue';
 export const usePersonStore = defineStore('Person', ()=> {
-  const work = ref("Default");
+  const job = ref("Default");
   const name = ref("Default");
+  const location = ref("Default");
   const isLoading = true;
-  return {work, name, isLoading}
+  return {job, name, location, isLoading}
 })

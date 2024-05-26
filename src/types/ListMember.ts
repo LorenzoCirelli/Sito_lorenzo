@@ -1,6 +1,6 @@
 interface Member {
     title: String,
-    description: String,
+    description: any,
     emoji:{
         isEnable:boolean,
         emoji: String

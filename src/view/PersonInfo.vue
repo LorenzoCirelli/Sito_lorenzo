@@ -7,6 +7,3 @@ import CatPlayer from '@/components/CatPlayer.vue';
 import LIstPlayer from '@/components/LIstPlayer.vue';
 const attr: Array<object> = [LIstPlayer, CatPlayer]
 </script>
-<style scoped>
-
-</style>

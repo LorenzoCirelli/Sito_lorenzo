@@ -15,6 +15,15 @@
 img{
     border-radius: 50%;
 }
+@media (max-width: 800px) {
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .card{
+        padding:20px;
+    }
+}
 </style>
 <template>
     <Skeletor height="50%" v-if="Person.isLoading"/>
