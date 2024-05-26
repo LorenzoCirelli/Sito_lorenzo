@@ -1,6 +1,12 @@
-<style lang="scss">
+<style lang="scss" scoped>
 .listElement {
   text-align: left;
+  width: fit-content;
+}
+
+p {
+    font-weight: 400;
+    text-transform: capitalize
 }
 </style>
 <template>

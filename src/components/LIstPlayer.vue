@@ -1,7 +1,24 @@
+<style lang="scss" scoped>
+.listOfElement {
+    font-size: 110%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.listOfElement div{
+    flex:1;
+}
+
+</style>
 <template>
     <div class="listOfElement">
         <Skeletor v-for="i in 5" :key="i" v-if="Persona.isLoading" width="50%"/>
-        <ListMember v-for="element, key in list" v-bind:elemntOfLIst="element" v-bind:key="key" v-else></ListMember>
+        <div v-else>
+            <ListMember v-for="element, key in list" v-bind:elemntOfLIst="element" v-bind:key="key" ></ListMember>
+        </div>
+        
     </div>
 </template>
 <script setup lang="ts">
