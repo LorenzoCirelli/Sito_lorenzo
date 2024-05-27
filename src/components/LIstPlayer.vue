@@ -1,6 +1,5 @@
 <style lang="scss" scoped>
 .listOfElement {
-    font-size: 110%;
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -14,8 +13,8 @@
 </style>
 <template>
     <div class="listOfElement">
-        <Skeletor v-for="i in 5" :key="i" v-if="Persona.isLoading" width="50%"/>
-        <div v-else>
+
+        <div>
             <ListMember v-for="element, key in list" v-bind:elemntOfLIst="element" v-bind:key="key" ></ListMember>
         </div>
         
@@ -27,8 +26,6 @@ import ListMember from './LIstMember.vue';
 import func from '../composables/PersonalDetail'
 import { usePersonStore } from '@/stores/Person'
 import { computed, reactive} from 'vue';
-import "vue-skeletor/dist/vue-skeletor.css";
-import { Skeletor } from "vue-skeletor";
 const Persona = reactive(usePersonStore());
 
 const experienceYrs = func.dateFrom('2023-08-21');

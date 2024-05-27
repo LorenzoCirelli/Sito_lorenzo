@@ -15,8 +15,12 @@
 img{
     border-radius: 50%;
 }
+.skeleton {
+    min-width: 150px;
+    min-height: 150px;
+}
 @media (max-width: 800px) {
-    img{
+    img {
         width: 100%;
         height: auto;
     }
@@ -26,7 +30,9 @@ img{
 }
 </style>
 <template>
-    <Skeletor height="50%" v-if="Person.isLoading"/>
+    <div class="skeleton" v-if="Person.isLoading">
+        <Skeletor />
+    </div>
     <div class="center" v-else>
         <div class="card">
             <div class="card__profile"><img src="../assets/miao.png" alt="Io"></div>
