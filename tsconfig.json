@@ -1,17 +1,7 @@
+
 {
   "compilerOptions": {
     "module": "NodeNext"
   },
-  "files": ["auto-imports.d.ts"],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
-    }
-  ]
+  "files": ["auto-imports.d.ts"]
 }

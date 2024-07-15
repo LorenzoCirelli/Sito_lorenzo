@@ -26,13 +26,12 @@ function compilaDati() {
           expire: 500000
         }
       })
-      .then((response) => response.json())
+      .then((response:any) => response.json())
       .then((data) => {
         Persona.job = data.company;
         Persona.name = data.name
         Persona.location = data.location
         Persona.isLoading = false
-        console.log(data)
       })
       return true;
 }
