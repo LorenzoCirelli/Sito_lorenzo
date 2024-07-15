@@ -11,3 +11,24 @@
 .colore {
     color: #2A83B6;
 }
+
+.font_medium {
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
