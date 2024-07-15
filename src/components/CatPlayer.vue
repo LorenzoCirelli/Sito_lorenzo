@@ -1,6 +1,0 @@
-<template>
-    <lottiPlayer path="/Cat.lottie" class="animation" height="900"></lottiPlayer>
-</template>
-<script lang="ts" setup>
-import lottiPlayer from "./lottiPlayer.vue";
-</script>
