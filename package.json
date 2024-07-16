@@ -1,6 +1,6 @@
 {
   "name": "sito-lorenzo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,8 +14,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "dayjs": "^1.11.11",
     "pinia": "^2.1.7",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-i18n": "^9.13.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",

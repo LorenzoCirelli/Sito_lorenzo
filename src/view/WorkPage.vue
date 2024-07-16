@@ -102,15 +102,15 @@
 <template>
   <div class="container_testo">
     <div class="container_testo__testo">
-      Progettando <span class="font_medium">e</span> sviluppando
-      <div><span class="font_medium">il</span> <span class="colore">futuro</span></div>
+      {{ $t('title_work[0]') }} <span class="font_medium">{{ $t('title_work[1]') }}</span> {{ $t('title_work[2]') }}
+      <div><span class="font_medium">{{ $t('title_work[3]') }}</span> <span class="colore">{{ $t('title_work[4]') }}</span></div>
       <span class="material-symbols-outlined icone"></span>
     </div>
   </div>
 
   <div class="experience">
     <div class="experience__bg">
-            testo
+      <div class="experience__bg__testo"></div>
     </div>
   </div>
 </template>

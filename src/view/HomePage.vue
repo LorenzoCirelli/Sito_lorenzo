@@ -79,7 +79,7 @@
         <div class="nominativo"><span class="colore">Lorenzo</span> Cirelli,</div>
         <div class="qualifica">software developer</div>
         <div class="dati">
-          19 anni • Cremona
+          {{tempo}} • Cremona
         </div>
       </div>
     </div>
@@ -88,4 +88,7 @@
     </div>
   </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import dayjs from 'dayjs'
+const tempo = dayjs('2004-08-03').fromNow(true)
+</script>
