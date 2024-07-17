@@ -20,7 +20,7 @@
 .immagine {
   border-radius: 38px;
   transform: rotate(-5deg);
-  width: clamp(300px, 30vw, 500px);
+  width: clamp(300px, 30vw, 1400px);
   animation: 1s img_load;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -78,13 +78,11 @@
       <div class="allineamento_testo">
         <div class="nominativo"><span class="colore">Lorenzo</span> Cirelli,</div>
         <div class="qualifica">software developer</div>
-        <div class="dati">
-          {{tempo}} • Cremona
-        </div>
+        <div class="dati">{{ tempo }} • Cremona</div>
       </div>
     </div>
     <div class="container__immagine">
-      <img src="/lorenzo.jpg" alt="Persona seduta" class="immagine" />
+        <img src="/lorenzo700.jpg" alt="Flowers" class="immagine"/>
     </div>
   </div>
 </template>
