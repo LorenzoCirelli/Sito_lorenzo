@@ -65,7 +65,7 @@
   .container {
     flex-direction: column-reverse;
     height: 90svh;
-    padding-top: 20vh;
+    padding-top: 20svh;
   }
 }
 .allineamento_testo {

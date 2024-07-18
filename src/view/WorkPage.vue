@@ -6,7 +6,7 @@
   font-size: clamp(25px, 2.3vw, 300px);
   font-weight: 700;
   display: flex;
-  padding: clamp(10px, 2vh, 50px) clamp(10px, 2vw, 50px);
+  padding: clamp(10px, 2svh, 20px) clamp(10px, 2svw, 50px);
   justify-content: center;
   &__testo {
     width: fit-content;
@@ -38,6 +38,26 @@
     top: -15vh;
   }
 }
+.pd_tb {
+  padding: 10px 0;
+}
+
+@media only screen and (max-width: 790px) {
+  @keyframes lampadina {
+    0% {
+      text-shadow: 2px 2px 10px rgb(255, 255, 0);
+      top: -9svh;
+    }
+    50% {
+      text-shadow: 2px 2px 10px transparent;
+      top: -10svh;
+    }
+    100% {
+      text-shadow: 2px 2px 10px rgb(255, 255, 0);
+      top: -9svh;
+    }
+  }
+}
 </style>
 <template>
   <div class="container_testo">
@@ -51,8 +71,10 @@
       <span class="material-symbols-outlined icone"></span>
     </div>
   </div>
-  <DotLottieVue autoplay loop src="/lorean.lottie"/>
+  <div class="pd_tb">
+    <BloccoEsperienza></BloccoEsperienza>
+  </div>
 </template>
 <script lang="ts" setup>
-import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
+import BloccoEsperienza from '@/components/BloccoEsperienza.vue'
 </script>
