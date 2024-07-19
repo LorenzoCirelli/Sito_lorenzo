@@ -18,7 +18,7 @@ const en = {
     'Software developer',
     'I develop and mantain software for managing medical track, meals, recording of clinical cases and much more for hospital'
   ],
-  title_life: ['Beyondd', '', 'work'],
+  title_life: ['Beyond', '', 'work'],
   subtitle_life: 'My life',
   description_life:
     'Beyond work i love biking, talk with friend, explore new city and maybe explore some hidden place.',
