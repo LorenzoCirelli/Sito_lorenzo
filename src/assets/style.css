@@ -7,7 +7,10 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
-
+.dark {
+  background-color:#121212;
+  color:whitesmoke;
+}
 .colore {
     color: #2A83B6;
 }
@@ -31,4 +34,7 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: gray;
+}
+.descrizione {
+  font-size: clamp(12px, 1.5svw, 21px);
 }

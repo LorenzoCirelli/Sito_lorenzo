@@ -28,6 +28,9 @@
 }
 
 @media only screen and (max-width: 790px) {
+  .icone::after {
+    right: -23svw;
+  }
   @keyframes lampadina {
     0% {
       text-shadow: 2px 2px 10px rgb(255, 255, 0);
@@ -43,9 +46,7 @@
     }
   }
 }
-.descrizione {
-  font-size: clamp(12px, 1.3svw, 20px);
-}
+
 .titolo {
   font-size: clamp(15px, 2.3svw, 40px);
   font-weight: 600;

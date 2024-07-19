@@ -12,10 +12,11 @@ dayjs.locale(locale)
 dayjs.extend(relativeTime)
 const app = createApp(App)
 const i18n = createI18n({
+  legacy: false,
   locale: locale,
   messages: {
     en: en,
-    it: it,
+    it: it
   }
 })
 

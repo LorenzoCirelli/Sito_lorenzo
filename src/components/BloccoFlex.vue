@@ -3,7 +3,7 @@
   padding: clamp(10px, 1.3vh, 500px) clamp(20px, 1.3vw, 600px);
   max-width: 100%;
   display: flex;
-  flex-direction: v-bind('flex');
+  flex-direction: v-bind('flex ');
   text-align: center;
   justify-content: center;
   align-items: center;
