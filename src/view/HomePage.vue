@@ -82,7 +82,7 @@
       </div>
     </div>
     <div class="container__immagine">
-        <img src="/lorenzo700.jpg" alt="Flowers" class="immagine"/>
+        <img src="/lorenzo700.jpg" alt="Lorenzo seduto su una sedia" class="immagine"/>
     </div>
   </div>
 </template>

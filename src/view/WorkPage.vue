@@ -1,19 +1,4 @@
 <style scoped lang="scss">
-.container_testo {
-  min-width: 150px;
-  max-width: 100%;
-  min-height: 50px;
-  font-size: clamp(25px, 2.3vw, 300px);
-  font-weight: 700;
-  display: flex;
-  padding: clamp(10px, 2svh, 20px) clamp(10px, 2svw, 50px);
-  justify-content: center;
-  &__testo {
-    width: fit-content;
-    text-align: center;
-  }
-}
-
 .icone::after {
   position: relative;
   right: -17svw;
@@ -58,23 +43,38 @@
     }
   }
 }
+.descrizione {
+  font-size: clamp(12px, 1.3svw, 20px);
+}
+.titolo {
+  font-size: clamp(15px, 2.3svw, 40px);
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+img {
+  width: 40%;
+  max-width: 50vw;
+}
 </style>
 <template>
-  <div class="container_testo">
-    <div class="container_testo__testo">
-      {{ $t('title_work[0]') }} <span class="font_medium">{{ $t('title_work[1]') }}</span>
-      {{ $t('title_work[2]') }}
-      <div>
-        <span class="font_medium">{{ $t('title_work[3]') }}</span>
-        <span class="colore">{{ $t('title_work[4]') }}</span>
-      </div>
-      <span class="material-symbols-outlined icone"></span>
+  <TitoloVista>
+    {{ $t('title_work[0]') }} <span class="font_medium">{{ $t('title_work[1]') }}</span>
+    {{ $t('title_work[2]') }}
+    <div>
+      <span class="font_medium">{{ $t('title_work[3]') }}</span>
+      <span class="colore">{{ $t('title_work[4]') }}</span>
     </div>
-  </div>
+    <span class="material-symbols-outlined icone"></span>
+  </TitoloVista>
   <div class="pd_tb">
-    <BloccoEsperienza></BloccoEsperienza>
+    <BloccoFlex lottie="/lorean.lottie" flex="row">
+      <img src="/net4market.png" alt="Logo net4market" />
+      <p class="titolo">{{ $t('n4m_description[0]') }}</p>
+      <p class="descrizione">{{ $t('n4m_description[1]') }}</p>
+    </BloccoFlex>
   </div>
 </template>
 <script lang="ts" setup>
-import BloccoEsperienza from '@/components/BloccoEsperienza.vue'
+import TitoloVista from '@/components/TitoloVista.vue'
+import BloccoFlex from '@/components/BloccoFlex.vue'
 </script>

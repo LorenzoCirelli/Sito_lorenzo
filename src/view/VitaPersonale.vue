@@ -1,23 +1,31 @@
-<style lang="scss">
-/* HTML: <div class="film-strip"></div> */
-.film-strip {
-  --s: 12px; /* control the size */
-  --c: #222;
- 
-  width: calc(20*var(--s));
-  aspect-ratio: 1.25;
-  background: 
-    conic-gradient(at 50% var(--s),var(--c) 75%,#0000 0) 
-    0 0/calc(2*var(--s)) calc(100% - var(--s)) padding-box;
-  border: var(--s) solid var(--c);
-  padding: calc(var(--s)*2.5) calc(var(--s)*1.5);
-  box-sizing: content-box;
-  /* you can add a filter for an oldish effect 
-  filter: sepia(1) brightness(0.9) grayscale(.2);
-  */
-}</style>
+<style scoped lang="scss">
+.descrizione {
+  font-size: clamp(12px, 1.3svw, 20px);
+}
+.titolo {
+  font-size: clamp(15px, 2.3svw, 40px);
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+img {
+  width: 40%;
+  max-width: 50vw;
+}
+</style>
 <template>
-    <div class="film-strip">
-        
-    </div>
+  <TitoloVista>
+   <span class="colore">{{ $t('title_life[0]') }}</span>
+    <span class="font_medium">{{ $t('title_life[1]') }}</span>
+    {{ $t('title_life[2]') }}
+  </TitoloVista>
+  <div class="pd_tb">
+    <BloccoFlex lottie="/bici.lottie" flex="row-reverse">
+      <p class="titolo">La mia vita</p>
+      <p class="descrizione">{{ $t('description_life') }}</p>
+    </BloccoFlex>
+  </div>
 </template>
+<script lang="ts" setup>
+import TitoloVista from '@/components/TitoloVista.vue'
+import BloccoFlex from '@/components/BloccoFlex.vue'
+</script>
