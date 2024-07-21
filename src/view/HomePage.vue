@@ -73,20 +73,33 @@
 }
 </style>
 <template>
-  <div class="container">
-    <div class="container__testo">
-      <div class="allineamento_testo">
-        <div class="nominativo"><span class="colore">Lorenzo</span> Cirelli,</div>
-        <div class="qualifica">software developer</div>
-        <div class="dati">{{ tempo }} • Cremona</div>
+    <div class="container">
+      <div class="container__testo">
+        <div class="allineamento_testo">
+          <div class="nominativo"><span class="colore">Lorenzo</span> Cirelli,</div>
+          <div class="qualifica">software developer</div>
+          <div class="dati">{{ tempo }} • Cremona</div>
+        </div>
+      </div>
+      <div class="container__immagine">
+          <img :src="url_img" alt="Lorenzo seduto su una sedia" class="immagine"/>
+          
       </div>
     </div>
-    <div class="container__immagine">
-        <img src="/lorenzo700.jpg" alt="Lorenzo seduto su una sedia" class="immagine"/>
-    </div>
-  </div>
 </template>
 <script lang="ts" setup>
 import dayjs from 'dayjs'
+import { useUrlToBlob } from '@/composable/blob';
+import { ref } from 'vue';
+let url_img = ref('');
+let url = 'http://127.0.0.1:5173/lorenzo700.jpg';
+async function loadImg() {
+  try {
+    url_img.value = await useUrlToBlob(url);
+  } catch (error) {
+    console.error('Error fetching image URL');
+  }
+}
+loadImg();
 const tempo = dayjs('2004-08-03').fromNow(true)
 </script>

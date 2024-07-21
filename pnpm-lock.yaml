@@ -14,6 +14,9 @@ importers:
       '@vueuse/core':
         specifier: ^10.11.0
         version: 10.11.0(vue@3.4.33(typescript@5.4.5))
+      alova:
+        specifier: ^2.21.4
+        version: 2.21.4
       dayjs:
         specifier: ^1.11.12
         version: 1.11.12
@@ -619,6 +622,10 @@ packages:
 
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
+
+  alova@2.21.4:
+    resolution: {integrity: sha512-2zgAmgTpGdeYmyTXCMZKKEhkuVqj3jt+EWWmXfZ7he5PlGLoSLAyawR11R5kVfxl8wR7V36Ete9gzUaHs0u9fw==}
+    engines: {node: '>= 0.12.0'}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -2246,6 +2253,8 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
+
+  alova@2.21.4: {}
 
   ansi-regex@5.0.1: {}
 
