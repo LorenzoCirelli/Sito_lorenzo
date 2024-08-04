@@ -79,11 +79,11 @@
           <div class="nominativo"><span class="colore">Lorenzo</span> Cirelli,</div>
           <div class="qualifica">software developer</div>
           <div class="dati">{{ tempo }} • Cremona</div>
+          {{ url_wave }}
         </div>
       </div>
       <div class="container__immagine">
           <img :src="url_img" alt="Lorenzo seduto su una sedia" class="immagine"/>
-          
       </div>
     </div>
 </template>
@@ -91,15 +91,17 @@
 import dayjs from 'dayjs'
 import { useUrlToBlob } from '@/composable/blob';
 import { ref } from 'vue';
+
+
 let url_img = ref('');
-let url = 'http://127.0.0.1:5173/lorenzo700.jpg';
+loadImg();
+
 async function loadImg() {
   try {
-    url_img.value = await useUrlToBlob(url);
+    url_img.value = await useUrlToBlob('http://localhost:5173/lorenzo700.jpg');
   } catch (error) {
     console.error('Error fetching image URL');
   }
 }
-loadImg();
 const tempo = dayjs('2004-08-03').fromNow(true)
 </script>
