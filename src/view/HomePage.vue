@@ -71,6 +71,9 @@
 .allineamento_testo {
   text-align: left;
 }
+
+
+
 </style>
 <template>
     <div class="container">
@@ -79,26 +82,28 @@
           <div class="nominativo"><span class="colore">Lorenzo</span> Cirelli,</div>
           <div class="qualifica">software developer</div>
           <div class="dati">{{ tempo }} • Cremona</div>
-          {{ url_wave }}
         </div>
       </div>
       <div class="container__immagine">
-          <img :src="url_img" alt="Lorenzo seduto su una sedia" class="immagine"/>
+          <img :src="url_img" alt="Lorenzo seduto su una sedia" class="immagine" v-if="loaded"/>
+          <div class="loader" v-else>
+
+          </div>
       </div>
     </div>
 </template>
 <script lang="ts" setup>
+let loaded = ref(false);
 import dayjs from 'dayjs'
 import { useUrlToBlob } from '@/composable/blob';
 import { ref } from 'vue';
-
-
 let url_img = ref('');
 loadImg();
 
 async function loadImg() {
   try {
     url_img.value = await useUrlToBlob('http://localhost:5173/lorenzo700.jpg');
+    loaded.value = true;
   } catch (error) {
     console.error('Error fetching image URL');
   }

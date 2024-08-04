@@ -69,7 +69,8 @@ img {
   </TitoloVista>
   <div class="pd_tb">
     <BloccoFlex lottie="/lorean.lottie" flex="row">
-      <img src="/net4market.png" alt="Logo net4market" />
+      <img :src="url_img" alt="Logo net4market" v-if="loader" />
+      <div class="loader" v-else></div>
       <p class="titolo">{{ $t('n4m_description[0]') }}</p>
       <p class="descrizione">{{ $t('n4m_description[1]') }}</p>
     </BloccoFlex>
@@ -78,4 +79,19 @@ img {
 <script lang="ts" setup>
 import TitoloVista from '@/components/TitoloVista.vue'
 import BloccoFlex from '@/components/BloccoFlex.vue'
+
+import { ref } from 'vue'
+import { useUrlToBlob } from '@/composable/blob'
+let loader = ref(false);
+let url_img = ref('');
+loadImg();
+
+async function loadImg() {
+  try {
+    url_img.value = await useUrlToBlob('http://localhost:5173/net4market.png');
+    loader.value = true;
+  } catch (error) {
+    console.error('Error fetching image URL')
+  }
+}
 </script>
