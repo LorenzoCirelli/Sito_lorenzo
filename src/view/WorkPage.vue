@@ -48,7 +48,7 @@
 }
 
 .titolo {
-  font-size: clamp(15px, 2.3svw, 40px);
+  font-size: clamp(20px, 2.5svw, 50px);
   font-weight: 600;
   padding-bottom: 5px;
 }
@@ -56,24 +56,32 @@ img {
   width: 40%;
   max-width: 50vw;
 }
+.fullPage{
+  min-height:100svh;
+}
+.descrizione {
+  font-size: clamp(15px, 1.3vw, 300px);
+}
 </style>
 <template>
-  <TitoloVista>
-    {{ $t('title_work[0]') }} <span class="font_medium">{{ $t('title_work[1]') }}</span>
-    {{ $t('title_work[2]') }}
-    <div>
-      <span class="font_medium">{{ $t('title_work[3]') }}</span>
-      <span class="colore">{{ $t('title_work[4]') }}</span>
+  <div class="fullPage">
+    <TitoloVista>
+      {{ $t('title_work[0]') }} <span class="font_medium">{{ $t('title_work[1]') }}</span>
+      {{ $t('title_work[2]') }}
+      <div>
+        <span class="font_medium">{{ $t('title_work[3]') }}</span>
+        <span class="colore">{{ $t('title_work[4]') }}</span>
+      </div>
+      <span class="material-symbols-outlined icone"></span>
+    </TitoloVista>
+    <div class="pd_tb">
+      <BloccoFlex lottie="/lorean.lottie" flex="row">
+        <img :src="url_img" alt="Logo net4market" v-if="loader" />
+        <div class="loader" v-else></div>
+        <p class="titolo">{{ $t('n4m_description[0]') }}</p>
+        <p class="descrizione">{{ $t('n4m_description[1]') }}</p>
+      </BloccoFlex>
     </div>
-    <span class="material-symbols-outlined icone"></span>
-  </TitoloVista>
-  <div class="pd_tb">
-    <BloccoFlex lottie="/lorean.lottie" flex="row">
-      <img :src="url_img" alt="Logo net4market" v-if="loader" />
-      <div class="loader" v-else></div>
-      <p class="titolo">{{ $t('n4m_description[0]') }}</p>
-      <p class="descrizione">{{ $t('n4m_description[1]') }}</p>
-    </BloccoFlex>
   </div>
 </template>
 <script lang="ts" setup>
@@ -88,7 +96,7 @@ loadImg();
 
 async function loadImg() {
   try {
-    url_img.value = await useUrlToBlob('http://localhost:5173/net4market.png');
+    url_img.value = await useUrlToBlob('net4market.png');
     loader.value = true;
   } catch (error) {
     console.error('Error fetching image URL')
