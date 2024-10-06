@@ -102,7 +102,7 @@ loadImg();
 
 async function loadImg() {
   try {
-    url_img.value = await useUrlToBlob('http://localhost:5173/lorenzo700.jpg');
+    url_img.value = await useUrlToBlob('/lorenzo700.jpg');
     loaded.value = true;
   } catch (error) {
     console.error('Error fetching image URL');

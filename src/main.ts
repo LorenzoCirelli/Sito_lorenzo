@@ -6,7 +6,8 @@ import 'dayjs/locale/it'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import iti18n from './i18ncofnf'
-const { it, en } = iti18n
+import it from '@/assets/it.json'
+import en from '@/assets/en.json'
 const locale = navigator.language
 dayjs.locale(locale)
 dayjs.extend(relativeTime)
