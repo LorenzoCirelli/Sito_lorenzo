@@ -14,7 +14,7 @@
     <Vita></Vita>
     <Contatti></Contatti>
 
-    <CookiePrivacy class="law"></CookiePrivacy>
+    <cookiePrivacy class="law"></cookiePrivacy>
   </div>
 </template>
 
@@ -24,7 +24,9 @@ import Work from './view/WorkPage.vue'
 import Vita from './view/VitaPersonale.vue'
 import Contatti from './view/ContattiLorenzo.vue'
 import { useDark } from '@vueuse/core'
-import CookiePrivacy from './view/cookiePrivacy.vue'
+import cookiePrivacy from './view/cookiePrivacy.vue'
+
+
 const isDark = useDark()
 
 </script>

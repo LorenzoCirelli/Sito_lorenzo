@@ -21,7 +21,7 @@ button:hover {
         <button @click="nascondi">{{ $t('legal[2]') }}</button>
     </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 let cookies = document.cookie
 let mostra = cookies.search("policyAccept") ? ref(true) : ref(false);
