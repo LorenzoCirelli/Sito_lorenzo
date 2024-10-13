@@ -7,18 +7,8 @@
   padding:1.5%
 }
 </style>
-<template>
-  <div :class="isDark ? 'dark' : 'light'">
-    <home></home>
-    <Work></Work>
-    <Vita></Vita>
-    <Contatti></Contatti>
-
-    <cookiePrivacy class="law"></cookiePrivacy>
-  </div>
-</template>
-
-<script setup lang="ts">
+<script lang="ts" setup>
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 import home from '@/view/HomePage.vue'
 import Work from './view/WorkPage.vue'
 import Vita from './view/VitaPersonale.vue'
@@ -30,3 +20,15 @@ import cookiePrivacy from './view/cookiePrivacy.vue'
 const isDark = useDark()
 
 </script>
+
+<template>
+  <SpeedInsights />
+  <div :class="isDark ? 'dark' : 'light'">
+    <home></home>
+    <Work></Work>
+    <Vita></Vita>
+    <Contatti></Contatti>
+
+    <cookiePrivacy class="law"></cookiePrivacy>
+  </div>
+</template>
