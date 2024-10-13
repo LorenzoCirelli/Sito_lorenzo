@@ -17,6 +17,7 @@ button:hover {
     <div v-if="mostra">
         <h1>{{ $t('legal[0]') }}</h1>
         <p>{{ $t('legal[1]') }}</p>
+        <a href="privacyutente.pdf" target="_blank"> terms and conditions </a>"
         <br>
         <button @click="nascondi">{{ $t('legal[2]') }}</button>
     </div>

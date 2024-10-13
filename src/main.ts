@@ -5,7 +5,6 @@ import App from './App.vue'
 import 'dayjs/locale/it'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-import iti18n from './i18ncofnf'
 import it from '@/assets/it.json'
 import en from '@/assets/en.json'
 const locale = navigator.language
