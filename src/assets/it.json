@@ -12,7 +12,8 @@
     "social": ["Contattami su instagram", "Contattami su linkedin"],
     "legal": [
       "Trasparenza raccolta dati",
-      "Questo sito utilizza cookie e altre tecnologie per raccogliere dati ai fini di sicurezza, analisi e altri scopi del titolare dati e servizi di google per distribuire il servizio.",
-      "Accetta"
+      "Questo sito utilizza cookie e altre tecnologie per raccogliere dati ai fini di sicurezza, analisi e altri scopi del titolare dati e servizi per distribuire il servizio.",
+      "Accetta",
+      "Rifiuta"
     ]
 }

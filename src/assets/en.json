@@ -12,7 +12,8 @@
     "social": ["Contact me on instagram", "Contact me on linkedin"],
     "legal": [
       "Transparency of collected data",
-      "This site uses cookies and other technologies to collect data for security, analysis and other purposes of the data controller and Google services to distribute the service.",
-      "Accept"
+      "This site uses cookies and other technologies to collect data for security, analysis and other purposes of the data controller and services to distribute the service.",
+      "Accept",
+      "Decline"
     ]
   }
