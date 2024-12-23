@@ -5,8 +5,8 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "@nuxt/fonts"],
   i18n: {
-    vueI18n: './i18n/config.ts',
+    vueI18n: "./i18n/config.ts",
   },
 });

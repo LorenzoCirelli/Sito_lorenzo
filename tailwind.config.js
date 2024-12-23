@@ -9,8 +9,8 @@ export default {
     colors: colorTheme,
     borderRadius: radiusTheme,
     fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
-      inter: ["Inter", "sans-serif"],
+      poppins: ['Poppins'],
+      inter: ['Inter'],
     },
   },
   plugins: [],
