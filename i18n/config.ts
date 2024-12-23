@@ -1,11 +1,11 @@
 import en from "./en";
 import it from "./it";
 
-export default {
+export default defineI18nConfig(() => ({
   legacy: false,
   locale: "en",
   messages: {
-    it: it,
-    en: en,
-  }
-};
+    en:en,
+    it: it
+  },
+}));
