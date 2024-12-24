@@ -3,10 +3,16 @@
     <div class="flex-1">
       <p class="text-4xl font-semibold">{{ $t("homepage.welcome") }}</p>
       <p class="text-4xl font-semibold">{{ $t("homepage.name") }}</p>
-      <span>{{ $t("homepage.description") }}</span
-      ><span>{{ $t("homepage.descriptionAfter") }}</span>
+      <span class="w-1">
+        <span class="text-4xl text-colors-text-gray">{{
+          $t("homepage.description")
+        }}</span
+        ><span class="text-4xl text-colors-text-gray">{{
+          $t("homepage.descriptionAfter")
+        }}</span>
+      </span>
     </div>
-    <div class="flex-1 align-end flex justify-end items-end">
+    <div class="flex-2.5 align-end flex justify-end items-end min-w-24">
       <img
         src="/lorenz.png"
         alt="Lorenzo Cirelli"
