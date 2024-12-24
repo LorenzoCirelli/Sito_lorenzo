@@ -1,4 +1,5 @@
 import colorTheme from "./tailwind/colorTheme";
+import flexTheme from "./tailwind/flexTheme";
 import radiusTheme from "./tailwind/radiusTheme";
 
 /** @type {import('tailwindcss').Config} */
@@ -7,9 +8,7 @@ export default {
   content: [],
   theme: {
     extend: {
-      flex: {
-        '2.5': '2.5 2.5 0%',
-      },
+      flex: flexTheme,
     },
     colors: colorTheme,
     borderRadius: radiusTheme,
