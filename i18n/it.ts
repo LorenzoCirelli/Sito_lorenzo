@@ -1,6 +1,7 @@
 export default {
   homepage: {
-    welcome: "Ciao 👋, sono Lorenzo Cirelli",
+    welcome: "Ciao 👋,",
+    name: "sono Lorenzo Cirelli",
     description: "Sviluppatore software con ",
     descriptionAfter: " anni di esperienza, basato a Cremona.",
   },
@@ -15,7 +16,7 @@ export default {
   projects: {
     title: "Progetti",
     description:
-      "Nel mio tempo libero mi piace creare software, qui c'è una lista di alcuni progetti sul mio github.",
+      "Nel mio tempo libero mi piace creare software, qui una lista di alcuni progetti sul mio github.",
   },
   tech: {
     Title: "Alcune delle tecnologie che uso",
