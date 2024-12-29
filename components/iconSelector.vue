@@ -1,6 +1,18 @@
 <style lang="css" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
 </style>
 <template>
-
+  <span class="material-symbols-outlined"> {{ icon }} </span>
 </template>
+<script setup lang="ts">
+import { defineProps } from "vue";
+const props = defineProps({
+    icon: {
+        type: String,
+        required: true,
+    },
+});
+</script>

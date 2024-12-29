@@ -3,7 +3,7 @@ export default {
     welcome: "Ciao 👋,",
     name: "sono Lorenzo Cirelli",
     description: "Sviluppatore software con ",
-    descriptionAfter: " anni di esperienza, basato a Cremona.",
+    descriptionAfter: " di esperienza, basato a Cremona.",
   },
 
   work: {
@@ -32,6 +32,6 @@ export default {
     cta: "contattami tramite",
   },
   buttons: {
-    contact: "conosciamoci",
+    contact: "Conosciamoci",
   },
 };

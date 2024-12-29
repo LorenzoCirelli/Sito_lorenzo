@@ -2,8 +2,12 @@
   <div class="flex flex-col-reverse gap-7 sm:flex-row">
     <div class="flex-1">
       <div>
-        <p class="text-3xl font-semibold sm:text-4xl">{{ $t("homepage.welcome") }}</p>
-        <p class="text-3xl font-semibold sm:text-4xl">{{ $t("homepage.name") }}</p>
+        <p class="text-3xl font-semibold sm:text-4xl">
+          {{ $t("homepage.welcome") }}
+        </p>
+        <p class="text-3xl font-semibold sm:text-4xl">
+          {{ $t("homepage.name") }}
+        </p>
         <span class="text-2xl text-colors-text-gray sm:text-3xl"
           >{{ $t("homepage.description") }}{{ tempo }}
           {{ $t("homepage.descriptionAfter") }}</span
@@ -13,7 +17,9 @@
         <ButtonPortfoglio></ButtonPortfoglio>
       </div>
     </div>
-    <div class="flex-3 flex align-middle items-center justify-center sm:justify-end">
+    <div
+      class="flex-3 flex align-middle items-center justify-center sm:justify-end"
+    >
       <img
         src="/lorenz.png"
         alt="Lorenzo Cirelli"
