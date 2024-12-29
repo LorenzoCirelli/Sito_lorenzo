@@ -3,7 +3,7 @@ import it from "./it";
 
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: "it",
+  locale: "en",
   messages: {
     en:en,
     it: it

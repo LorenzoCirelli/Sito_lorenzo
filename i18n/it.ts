@@ -1,8 +1,10 @@
 export default {
   homepage: {
     welcome: "Ciao 👋,",
-    name: "sono Lorenzo Cirelli",
-    description: "Sviluppatore software con ",
+    conn: "sono",
+    name: "Lorenzo Cirelli",
+    description: "Sviluppatore software",
+    conn2: " con ",
     descriptionAfter: " di esperienza, basato a Cremona.",
   },
 
