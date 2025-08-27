@@ -25,7 +25,7 @@ button:hover {
   </div>
 </template>
 <script setup lang="ts">
-import { ref, type Ref } from 'vue'
+import { ref } from 'vue'
 const cookies = document.cookie
 let mostra = cookies.search('policyAccept') ? ref(true) : ref(false)
 
@@ -34,8 +34,5 @@ const emit = defineEmits(['privacy'])
 function accetta(stato: boolean) {
   mostra.value = false
   emit('privacy', stato)
-  if (stato) {
-    document.cookie = 'policyAccept=true'
-  }
 }
 </script>
