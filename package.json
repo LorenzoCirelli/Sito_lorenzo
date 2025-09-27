@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@astrojs/node": "^9.4.4",
-    "astro": "^5.11.0"
+    "@astrojs/vue": "^5.1.1",
+    "astro": "^5.11.0",
+    "vue": "^3.5.22"
   },
   "devDependencies": {
     "sass-embedded": "^1.93.2"
