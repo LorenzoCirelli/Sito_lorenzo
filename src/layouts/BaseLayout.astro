@@ -1,5 +1,6 @@
 ---
 import "../assets/styling/baseDesign.scss";
+import TopNavigationBar from "../components/navigation/TopNavigationBar.astro";
 ---
 
 <html lang="en">
@@ -8,11 +9,20 @@ import "../assets/styling/baseDesign.scss";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Portfolio online di lorenzo cirelli, con tutti i progetti e librerie pubbliche"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>onlinelorenzocirelli</title>
   </head>
   <body>
-    <slot />
+    <div class="parent">
+      <div class="div1"><TopNavigationBar /></div>
+      <div class="div2">
+        <slot />
+      </div>
+    </div>
   </body>
 </html>
