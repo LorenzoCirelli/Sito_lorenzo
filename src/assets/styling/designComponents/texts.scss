@@ -1,0 +1,114 @@
+@use '../variables/typography' as typo;
+@use '../variables/colors';
+
+.overline {
+  font-size: typo.$overline-size;
+  font-weight: typo.$overline-weight;
+  line-height: typo.$overline-line-height;
+  letter-spacing: typo.$overline-letter-spacing;
+}
+
+.caption-sm {
+  font-size: typo.$caption-sm-size;
+  font-weight: typo.$caption-sm-weight;
+  line-height: typo.$caption-sm-line-height;
+  letter-spacing: typo.$caption-sm-letter-spacing;
+}
+
+.caption {
+  font-size: typo.$caption-size;
+  font-weight: typo.$caption-weight;
+  line-height: typo.$caption-line-height;
+  letter-spacing: typo.$caption-letter-spacing;
+}
+
+.caption_lg {
+  font-size: typo.$caption-lg-size;
+  font-weight: typo.$caption-lg-weight;
+  line-height: typo.$caption-lg-line-height;
+  letter-spacing: typo.$caption-lg-letter-spacing;
+}
+
+.hero {
+  font-size: typo.$hero-size;
+  font-weight: typo.$hero-weight;
+  line-height: typo.$hero-line-height;
+  letter-spacing: typo.$hero-letter-spacing;
+}
+
+.custom-1933 {
+  font-size: typo.$custom-1933-size;
+  font-weight: typo.$custom-1933-weight;
+  line-height: typo.$custom-1933-line-height;
+  letter-spacing: typo.$custom-1933-letter-spacing;
+}
+
+.display-md {
+  font-size: typo.$display-md-size;
+  font-weight: typo.$display-md-weight;
+  line-height: typo.$display-md-line-height;
+  letter-spacing: typo.$display-md-letter-spacing;
+}
+
+.h1 {
+  font-size: typo.$h1-size;
+  font-weight: typo.$h1-weight;
+  line-height: typo.$h1-line-height;
+  letter-spacing: typo.$h1-letter-spacing;
+}
+
+.h2 {
+  font-size: typo.$h2-size;
+  font-weight: typo.$h2-weight;
+  line-height: typo.$h2-line-height;
+  letter-spacing: typo.$h2-letter-spacing;
+}
+
+.h3 {
+  font-size: typo.$h3-size;
+  font-weight: typo.$h3-weight;
+  line-height: typo.$h3-line-height;
+  letter-spacing: typo.$h3-letter-spacing;
+}
+
+.h4 {
+  font-size: typo.$h4-size;
+  font-weight: typo.$h4-weight;
+  line-height: typo.$h4-line-height;
+  letter-spacing: typo.$h4-letter-spacing;
+}
+
+.h5 {
+  font-size: typo.$h5-size;
+  font-weight: typo.$h5-weight;
+  line-height: typo.$h5-line-height;
+  letter-spacing: typo.$h5-letter-spacing;
+}
+
+.h6 {
+  font-size: typo.$h6-size;
+  font-weight: typo.$h6-weight;
+  line-height: typo.$h6-line-height;
+  letter-spacing: typo.$h6-letter-spacing;
+}
+
+.body-xl {
+  font-size: typo.$body-xl-size;
+  font-weight: typo.$body-xl-weight;
+  line-height: typo.$body-xl-line-height;
+  letter-spacing: typo.$body-xl-letter-spacing;
+}
+
+.body {
+  font-size: typo.$body-size;
+  font-weight: typo.$body-weight;
+  line-height: typo.$body-line-height;
+  letter-spacing: typo.$body-letter-spacing;
+}
+
+.body-sm {
+  font-size: typo.$body-sm-size;
+  font-weight: typo.$body-sm-weight;
+  line-height: typo.$body-sm-line-height;
+  letter-spacing: typo.$body-sm-letter-spacing;
+}
