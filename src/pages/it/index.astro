@@ -23,6 +23,8 @@ import MainImageLanding from "../../assets/images/landing/lorenzo.png";
         width: 55%;
         height: auto;
         min-width: 300px;
+        -webkit-filter: drop-shadow(5px 2px 3px #00000059);
+        filter: drop-shadow(5px 2px 3px #00000059);
       }
     }
     &__hero {
@@ -52,7 +54,7 @@ import MainImageLanding from "../../assets/images/landing/lorenzo.png";
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 0.3fr);
       &__image {
-        margin-left: spacing.$padding*2;
+        margin-left: spacing.$padding * 2;
         margin-bottom: spacing.$padding;
         align-items: center;
         &--optimizedImage {
@@ -69,7 +71,7 @@ import MainImageLanding from "../../assets/images/landing/lorenzo.png";
     <div class="parent__image">
       <Image
         src={MainImageLanding}
-        alt="Lorenzo Cirelli image"
+        alt=""
         class="parent__image--optimizedImage"
         decoding="async"
         loading="lazy"
