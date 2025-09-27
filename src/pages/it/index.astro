@@ -7,6 +7,7 @@ import MainImageLanding from "../../assets/images/landing/lorenzo.png";
 <style lang="scss">
   @use "../../assets/styling/variables/_spacing" as spacing;
   @use "../../assets/styling/variables/_colors" as color;
+  @use "../../assets/styling/designComponents/bgText";
   .parent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -37,14 +38,7 @@ import MainImageLanding from "../../assets/images/landing/lorenzo.png";
         flex-direction: column;
         gap: spacing.$padding * 2;
 
-        background: #ffffff;
-        background: radial-gradient(
-          circle,
-          rgba(255, 255, 255, 1) 0%,
-          rgba(255, 255, 255, 1) 78%,
-          rgba(255, 255, 255, 0) 100%
-        );
-
+        @extend .bgText;
         &--welcome {
           display: flex;
           flex-direction: column;

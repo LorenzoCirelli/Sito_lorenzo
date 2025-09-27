@@ -61,6 +61,7 @@ figcaption {
 
 .logo {
   @extend .logoFont;
+  cursor: pointer;
 }
 
 header,
@@ -80,4 +81,8 @@ figcaption {
 
 button {
   @extend .button;
+}
+
+a {
+  all: unset;
 }

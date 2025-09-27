@@ -3,6 +3,47 @@ import RoleSelection from "../../../components/onBoarding/RoleSelection.vue";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
+<style lang="scss">
+  @use "../../../assets/styling/variables/spacing" as spacing;
+  @use '../../../assets/styling/designComponents/bgText';
+  
+  .mainSlectionOnboarding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80svh;
+    justify-content: center;
+    &__elems {
+      display: flex;
+      flex-direction: column;
+      gap: spacing.$padding * 3;
+      &__text {
+        @extend .bgText;
+      }
+    }
+  }
+</style>
 <BaseLayout>
-  <RoleSelection />
+  <div class="mainSlectionOnboarding">
+    <span class="mainSlectionOnboarding__elems">
+      <span class="mainSlectionOnboarding__elems__text">
+        <header>Raccontami chi sei 🤝</header>
+        <bold>Mi fa piacere conoscerti</bold>
+      </span>
+      <main><RoleSelection /></main>
+    </span>
+  </div>
 </BaseLayout>
+<script>
+  import { gsap } from "gsap";
+
+  gsap.to(".mainSlectionOnboarding", {
+    keyframes: {
+      x: [0, 0, 0],
+      y: [60, 40, 0],
+      easeEach: "sine.inOut",
+      ease: "expo.out",
+    },
+    duration: 2,
+  });
+</script>
