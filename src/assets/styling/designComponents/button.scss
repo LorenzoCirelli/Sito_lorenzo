@@ -1,0 +1,16 @@
+@use "../variables/colors" as color;
+@use "../variables/radius" as radius;
+@use "../variables/spacing" as spacing;
+@use "./text.scss";
+
+.button {
+  border: transparent;
+  @extend .body;
+  border-radius: radius.$border_radius;
+  background-color: color.$cta;
+  padding: spacing.$padding  spacing.$padding * 2;
+  margin: spacing.$margin 0;
+  color: color.$white;
+  cursor: pointer;
+  font-weight: 700;
+}

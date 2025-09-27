@@ -16,13 +16,24 @@ import TopNavigationBar from "../components/navigation/TopNavigationBar.astro";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>onlinelorenzocirelli</title>
+    <style lang="scss">
+      @use "../assets/styling/variables/_spacing" as spacing;
+      body {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        min-height: 100svh;
+        margin: 0;
+      }
+
+      .barra {
+        padding: spacing.$padding*2;
+      }
+    </style>
   </head>
   <body>
-    <div class="parent">
-      <div class="div1"><TopNavigationBar /></div>
-      <div class="div2">
-        <slot />
-      </div>
+    <div class="barra"><TopNavigationBar /></div>
+    <div class="contenuto">
+      <slot />
     </div>
   </body>
 </html>

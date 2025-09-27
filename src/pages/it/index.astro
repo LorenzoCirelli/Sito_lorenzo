@@ -1,13 +1,49 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
-
-
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<script>
-    import { ui } from '../../i18n/ui'
-    console.log(ui)
-</script>
+
+<style lang="scss">
+  @use "../../assets/styling/variables/_spacing" as spacing;
+  @use "../../assets/styling/variables/_colors" as color;
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    min-height: 100%;
+    gap: spacing.$padding;
+    &__hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: spacing.$padding * 2;
+      &--welcome {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        strong {
+          color: color.$subtext;
+        }
+      }
+    }
+  }
+</style>
 <BaseLayout>
-    <h1>Testing onlinelorenzocirelli</h1>
-    <p>Testing componenti e stile</p>
+  <div class="parent">
+    <div class="parent__image">1</div>
+    <div class="parent__hero">
+      <span class="parent__hero--welcome">
+        <header>Lorenzo Cirelli Online</header>
+        <strong
+          >La piattaforma per: scoprire di me, leggere i miei articoli,
+          conoscere le mie librerie e software open source</strong
+        >
+      </span>
+      <span>
+        <figcaption>
+          Cliccando iniziamo seguirai una procedura di onboarding
+        </figcaption>
+        <button>Iniziamo</button>
+      </span>
+    </div>
+  </div>
 </BaseLayout>

@@ -1,7 +1,9 @@
-@use "./designComponents/texts.scss";
+@use "./designComponents/text.scss";
 @use "./designComponents/font.scss";
 @use "./designComponents/background.scss";
+@use "./variables/_colors" as color;
 @use "./variables/_spacing" as spacing;
+@use "./designComponents/button.scss";
 
 * {
   @extend .primaryFont;
@@ -54,4 +56,28 @@ small {
 
 figcaption {
   @extend .caption;
+  color: color.$captionText;
+}
+
+.logo {
+  @extend .logoFont;
+}
+
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong,
+small,
+figcaption {
+  max-width: calc(4ch * 13);
+  overflow-wrap: break-word;
+}
+
+button {
+  @extend .button;
 }

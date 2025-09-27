@@ -1,8 +1,48 @@
 ---
----
-<style lang="scss" scoped>
 
+---
+
+<style lang="scss">
+  @use "../../assets/styling/variables/_spacing" as spacing;
+  @use "../../assets/styling/variables/_radius" as radius;
+  @use "../../assets/styling/variables/_colors" as color;
+  @use "../../assets/styling/designComponents/shadow.scss" as shadow;
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__bar {
+      @extend .shadow;
+      background-color: color.$whiteLight;
+      display: flex;
+      padding: spacing.$padding spacing.$padding * 6;
+      border-radius: radius.$border_radius * 2;
+      gap: spacing.$padding * 11;
+      &__opzioni {
+        gap: spacing.$padding * 4;
+        display: flex;
+        span {
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 </style>
-<div>
-bar
+<style lang="scss" scoped></style>
+<div class="navigation">
+  <div class="navigation__bar">
+    <span class="navigation__bar--logo"
+      ><p class="logo">Lorenzo Cirelli</p></span
+    >
+    <span class="navigation__bar__opzioni">
+      <span><p>Home</p></span>
+      <span><p>Me</p></span>
+      <span><p>Open source & librerie</p></span>
+      <span><p>Articoli & blog</p></span>
+      <span><p>Branding</p></span>
+      <span><p>Legal</p></span>
+      <span><p>Contatti</p></span>
+    </span>
+  </div>
 </div>
