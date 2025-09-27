@@ -12,7 +12,6 @@ import MainImageLanding from "../../assets/images/landing/lorenzo.png";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     min-height: 100%;
-    gap: spacing.$padding * 3;
     &__image {
       display: flex;
       flex-direction: column;
@@ -37,6 +36,15 @@ import MainImageLanding from "../../assets/images/landing/lorenzo.png";
         display: flex;
         flex-direction: column;
         gap: spacing.$padding * 2;
+
+        background: #ffffff;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 78%,
+          rgba(255, 255, 255, 0) 100%
+        );
+
         &--welcome {
           display: flex;
           flex-direction: column;
@@ -58,9 +66,9 @@ import MainImageLanding from "../../assets/images/landing/lorenzo.png";
         margin-bottom: spacing.$padding;
         align-items: center;
         &--optimizedImage {
-          width: 40%;
+          width: 90%;
           height: auto;
-          min-width: 200px;
+          min-width: 100px;
         }
       }
     }
@@ -91,9 +99,22 @@ import MainImageLanding from "../../assets/images/landing/lorenzo.png";
           <figcaption>
             Cliccando iniziamo seguirai una procedura di onboarding
           </figcaption>
-          <button>Iniziamo</button>
+          <a href="it/onboarding"><button>Iniziamo</button></a>
         </span>
       </div>
     </div>
   </div>
 </BaseLayout>
+<script>
+  import { gsap } from "gsap";
+
+  gsap.to(".parent", {
+    keyframes: {
+      x: [0, 0, 0],
+      y: [50, 40, 0],
+      easeEach: "sine.inOut",
+      ease: "expo.out",
+    },
+    duration: 2,
+  });
+</script>

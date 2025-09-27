@@ -19,6 +19,9 @@ import TopNavigationBar from "../components/navigation/TopNavigationBar.astro";
     <style lang="scss">
       @use "../assets/styling/variables/_spacing" as spacing;
       body {
+        background: white;
+        background-image: radial-gradient(rgb(109, 109, 109) 1.2px, transparent 0);
+        background-size: 30px 30px;
         display: grid;
         grid-template-rows: auto 1fr;
         min-height: 100svh;
@@ -28,7 +31,15 @@ import TopNavigationBar from "../components/navigation/TopNavigationBar.astro";
       .barra {
         padding: spacing.$padding * 2;
       }
+      @media only screen and (max-width: 820px) {
 
+        .barra {
+          display: none;
+        }
+        .contenuto {
+          margin: spacing.$padding * 4;
+        }
+      }
     </style>
   </head>
   <body>
