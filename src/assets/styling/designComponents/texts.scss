@@ -1,11 +1,12 @@
-@use '../variables/typography' as typo;
-@use '../variables/colors';
+@use "../variables/typography" as typo;
+@use "../variables/colors" as color;
 
 .overline {
   font-size: typo.$overline-size;
   font-weight: typo.$overline-weight;
   line-height: typo.$overline-line-height;
   letter-spacing: typo.$overline-letter-spacing;
+  color: color.$black;
 }
 
 .caption-sm {
@@ -13,6 +14,7 @@
   font-weight: typo.$caption-sm-weight;
   line-height: typo.$caption-sm-line-height;
   letter-spacing: typo.$caption-sm-letter-spacing;
+  color: color.$black;
 }
 
 .caption {
@@ -20,6 +22,7 @@
   font-weight: typo.$caption-weight;
   line-height: typo.$caption-line-height;
   letter-spacing: typo.$caption-letter-spacing;
+  color: color.$black;
 }
 
 .caption_lg {
@@ -36,18 +39,13 @@
   letter-spacing: typo.$hero-letter-spacing;
 }
 
-.custom-1933 {
-  font-size: typo.$custom-1933-size;
-  font-weight: typo.$custom-1933-weight;
-  line-height: typo.$custom-1933-line-height;
-  letter-spacing: typo.$custom-1933-letter-spacing;
-}
 
 .display-md {
   font-size: typo.$display-md-size;
   font-weight: typo.$display-md-weight;
   line-height: typo.$display-md-line-height;
   letter-spacing: typo.$display-md-letter-spacing;
+  color: color.$black;
 }
 
 .h1 {
@@ -62,6 +60,7 @@
   font-weight: typo.$h2-weight;
   line-height: typo.$h2-line-height;
   letter-spacing: typo.$h2-letter-spacing;
+  color: color.$black;
 }
 
 .h3 {
@@ -69,6 +68,7 @@
   font-weight: typo.$h3-weight;
   line-height: typo.$h3-line-height;
   letter-spacing: typo.$h3-letter-spacing;
+  color: color.$black;
 }
 
 .h4 {
@@ -76,6 +76,7 @@
   font-weight: typo.$h4-weight;
   line-height: typo.$h4-line-height;
   letter-spacing: typo.$h4-letter-spacing;
+  color: color.$black;
 }
 
 .h5 {
@@ -83,6 +84,7 @@
   font-weight: typo.$h5-weight;
   line-height: typo.$h5-line-height;
   letter-spacing: typo.$h5-letter-spacing;
+  color: color.$black;
 }
 
 .h6 {
@@ -90,6 +92,7 @@
   font-weight: typo.$h6-weight;
   line-height: typo.$h6-line-height;
   letter-spacing: typo.$h6-letter-spacing;
+  color: color.$black;
 }
 
 .body-xl {
@@ -97,6 +100,7 @@
   font-weight: typo.$body-xl-weight;
   line-height: typo.$body-xl-line-height;
   letter-spacing: typo.$body-xl-letter-spacing;
+  color: color.$black;
 }
 
 .body {
@@ -104,6 +108,7 @@
   font-weight: typo.$body-weight;
   line-height: typo.$body-line-height;
   letter-spacing: typo.$body-letter-spacing;
+  color: color.$black;
 }
 
 .body-sm {
@@ -111,4 +116,5 @@
   font-weight: typo.$body-sm-weight;
   line-height: typo.$body-sm-line-height;
   letter-spacing: typo.$body-sm-letter-spacing;
+  color: color.$black;
 }

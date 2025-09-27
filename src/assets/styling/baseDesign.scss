@@ -1,12 +1,23 @@
-@use './designComponents/texts.scss';
-@use './designComponents/font.scss';
+@use "./designComponents/texts.scss";
+@use "./designComponents/font.scss";
+@use "./designComponents/background.scss";
+@use "./variables/_spacing" as spacing;
 
 * {
-    @extend .primaryFont;
+  @extend .primaryFont;
+}
+
+body {
+  @extend .background;
+  margin: spacing.$margin;
 }
 
 h1 {
   @extend .h1;
+}
+
+header {
+  @extend .hero;
 }
 
 h2 {
@@ -27,4 +38,20 @@ h5 {
 
 h6 {
   @extend .h6;
+}
+
+p {
+  @extend .body;
+}
+
+strong {
+  @extend .body-xl;
+}
+
+small {
+  @extend .body-sm;
+}
+
+figcaption {
+  @extend .caption;
 }

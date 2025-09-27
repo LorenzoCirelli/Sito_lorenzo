@@ -1,0 +1,5 @@
+@use "../variables/colors" as color;
+
+.background {
+  background-color: color.$white;
+}
