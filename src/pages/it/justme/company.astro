@@ -2,7 +2,8 @@
 import { Image } from "astro:assets";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import LateralCompanyImage from "../../../assets/images/justme/lorenzo_company.png";
-import IconSelector from "../../../components/icons/IconSelector.astro";
+import IconSelector from "../../../components/icons/IconSelector.vue";
+import net4marketLogo from "../../../assets/images/justme/net4market.png";
 ---
 
 <style lang="scss">
@@ -41,7 +42,7 @@ import IconSelector from "../../../components/icons/IconSelector.astro";
       }
     }
     &__body {
-      padding: 0 spacing.$padding * 4;
+      padding: 0 spacing.$padding * 6;
       background: unset;
       background-color: color.$white;
       grid-column: span 2 / span 2;
@@ -50,11 +51,23 @@ import IconSelector from "../../../components/icons/IconSelector.astro";
         display: flex;
         gap: spacing.$padding;
         align-items: center;
-        padding: spacing.$padding;
         h3 {
           color: color.$primary;
         }
       }
+    }
+  }
+
+  .parent__body__work {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+    &__image {
+
+    }
+    .div2 {
+      grid-column: span 2 / span 2;
     }
   }
 </style>
@@ -79,10 +92,22 @@ import IconSelector from "../../../components/icons/IconSelector.astro";
     </div>
     <div class="parent__body">
       <div class="parent__body__title">
-        <h3><IconSelector icon="data_exploration" /></h3>
+        <h2><IconSelector icon="data_exploration" /></h2>
         <h3>Lavoro ed esperienza</h3>
       </div>
-      
+      <div class="parent__body__work">
+        <span class="parent__body__work__image">
+          <Image
+            class="parent__body__work__image--optimizedImage"
+            src={net4marketLogo}
+            alt=""
+            decoding="async"
+            loading="lazy"
+            width={100}
+          />
+        </span>
+        <span class="parent__body__work__description"></span>
+      </div>
     </div>
   </div>
 </BaseLayout>

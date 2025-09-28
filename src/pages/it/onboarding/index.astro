@@ -1,5 +1,5 @@
 ---
-import RoleSelection from "../../../components/onBoarding/RoleSelection.astro";
+import RoleSelection from "../../../components/onBoarding/RoleSelection.vue";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
@@ -30,7 +30,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
         <header>Raccontami chi sei 🤝</header>
         <bold>Mi fa piacere conoscerti</bold>
       </span>
-      <main><RoleSelection /></main>
+      <main><RoleSelection client:load/></main>
     </span>
   </div>
 </BaseLayout>

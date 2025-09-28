@@ -1,5 +1,6 @@
 ---
-
+import { getRelativeLocaleUrl } from "astro:i18n";
+const currentPath = Astro.url.pathname;
 ---
 
 <style lang="scss">
@@ -21,12 +22,18 @@
       &__opzioni {
         gap: spacing.$padding * 4;
         display: flex;
-        span {
+        a {
           align-items: center;
           cursor: pointer;
+          padding: 0 spacing.$padding * 2;
+          border-radius: radius.$border_radius;
         }
       }
     }
+  }
+
+  .active {
+    background-color: color.$selection;
   }
 </style>
 <style lang="scss" scoped></style>
@@ -34,18 +41,21 @@
   <div class="navigation__bar">
     <a href="/">
       <span class="navigation__bar--logo"
-        ><p class="logo">Lorenzo Cirelli</p></span
-      >
+        ><p class="logo">Lorenzo Cirelli</p></span>
     </a>
 
     <span class="navigation__bar__opzioni">
-      <span><p>Home</p></span>
-      <span><p>Me</p></span>
-      <span><p>Open source & librerie</p></span>
-      <span><p>Articoli & blog</p></span>
-      <span><p>Branding</p></span>
-      <span><p>Legal</p></span>
-      <span><p>Contatti</p></span>
+      <a
+        href="/"
+        class={currentPath === "/it" || currentPath === "/en" ? "active" : ""}
+        ><p>Home</p></a
+      >
+      <a href={getRelativeLocaleUrl("it", "justme")}><p>Me</p></a>
+      <a><p>Open source & librerie</p></a>
+      <a><p>Articoli & blog</p></a>
+      <a><p>Branding</p></a>
+      <a><p>Legal</p></a>
+      <a><p>Contatti</p></a>
     </span>
   </div>
 </div>

@@ -4,6 +4,8 @@
 @use "./variables/_colors" as color;
 @use "./variables/_spacing" as spacing;
 @use "./designComponents/button.scss";
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Barriecito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 * {
   @extend .primaryFont;
