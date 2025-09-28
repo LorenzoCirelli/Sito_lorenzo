@@ -1,5 +1,6 @@
 ---
 import "../assets/styling/baseDesign.scss";
+import PostHog from "../components/external/PostHog.astro";
 import TopNavigationBar from "../components/navigation/TopNavigationBar.astro";
 ---
 
@@ -43,6 +44,7 @@ import TopNavigationBar from "../components/navigation/TopNavigationBar.astro";
     </style>
   </head>
   <body>
+    <!-- <PostHog/> -->
     <div class="barra"><TopNavigationBar /></div>
     <div class="contenuto">
       <slot />
