@@ -1,0 +1,12 @@
+---
+const { icon } = Astro.props;
+console.log(icon)
+---
+<style lang="scss">
+@use '../../assets/styling/designComponents/icon.scss';
+
+</style>
+
+<span class="material-symbols-outlined">
+{{ icon }}
+</span>

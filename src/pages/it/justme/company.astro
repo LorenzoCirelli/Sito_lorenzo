@@ -1,0 +1,88 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import LateralCompanyImage from "../../../assets/images/justme/lorenzo_company.png";
+import IconSelector from "../../../components/icons/IconSelector.astro";
+---
+
+<style lang="scss">
+  @use "../../../assets/styling/variables/spacing" as spacing;
+  @use "../../../assets/styling/designComponents/bgText.scss";
+  @use "../../../assets/styling/variables/colors" as color;
+  .parent {
+    padding: spacing.$padding * 6 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: spacing.$padding * 3;
+    &__image,
+    &__hero {
+      padding: spacing.$padding * 3 0;
+    }
+    &__hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--text {
+        @extend .bgText;
+      }
+    }
+    &__image {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      display: flex;
+      &--optimizedImage {
+        width: 40%;
+        height: auto;
+        min-width: 300px;
+        -webkit-filter: drop-shadow(5px 2px 3px #00000059);
+        filter: drop-shadow(5px 2px 3px #00000059);
+      }
+    }
+    &__body {
+      padding: 0 spacing.$padding * 4;
+      background: unset;
+      background-color: color.$white;
+      grid-column: span 2 / span 2;
+      grid-row: span 4 / span 4;
+      &__title {
+        display: flex;
+        gap: spacing.$padding;
+        align-items: center;
+        padding: spacing.$padding;
+        h3 {
+          color: color.$primary;
+        }
+      }
+    }
+  }
+</style>
+<BaseLayout>
+  <div class="parent">
+    <div class="parent__hero">
+      <span class="parent__hero--text">
+        <h3>Lorenzo Cirelli</h3>
+        <header>Software developer, <br />ma non solo</header>
+        <strong>21 Anni</strong>
+      </span>
+    </div>
+    <div class="parent__image">
+      <Image
+        class="parent__image--optimizedImage"
+        src={LateralCompanyImage}
+        alt=""
+        decoding="async"
+        loading="lazy"
+        width={500}
+      />
+    </div>
+    <div class="parent__body">
+      <div class="parent__body__title">
+        <h3><IconSelector icon="data_exploration" /></h3>
+        <h3>Lavoro ed esperienza</h3>
+      </div>
+      
+    </div>
+  </div>
+</BaseLayout>

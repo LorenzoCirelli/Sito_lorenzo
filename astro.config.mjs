@@ -16,5 +16,5 @@ export default defineConfig({
     routing: { prefixDefaultLocale: true },
   },
 
-  integrations: [vue()],
+  integrations: [vue({ devtools: true })],
 });
