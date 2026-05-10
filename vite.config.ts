@@ -13,11 +13,16 @@ export default defineConfig({
     }
   },
   build: {
-    //DA SISTEMARE, RENDENDO LEGGERI I CHUNK
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 508,
     rollupOptions: {
-      output:{
-        inlineDynamicImports: true,
+      output: {
+        inlineDynamicImports: false,
+
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+          }
+        }
       }
     }
   }
