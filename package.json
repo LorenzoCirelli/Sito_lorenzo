@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
+    "preview": "pnpm run build-only && wrangler dev",
     "test:unit": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "deploy": "pnpm run build-only && wrangler deploy"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-vue": "0.11.11",
@@ -24,6 +25,7 @@
     "vue-router": "5.0.4"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.36.4",
     "@rushstack/eslint-patch": "1.15.0",
     "@tsconfig/node20": "20.1.9",
     "@types/jsdom": "28.0.1",
@@ -42,7 +44,8 @@
     "typescript": "6.0.3",
     "vite": "8.0.8",
     "vitest": "4.1.4",
-    "vue-tsc": "3.2.6"
+    "vue-tsc": "3.2.6",
+    "wrangler": "^4.90.1"
   },
   "pnpm": {
     "overrides": {
