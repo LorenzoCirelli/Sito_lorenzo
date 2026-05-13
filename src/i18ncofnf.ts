@@ -12,7 +12,7 @@ const it = {
   social: ['Contattami su instagram', 'Contattami su linkedin'],
   legal: [
     'Trasparenza raccolta dati',
-    'Questo sito usa solo cookie tecnici e Google Fonts tramite CDN Google',
+    'Questo sito usa solo cookie tecnici, Google Fonts e jsDelivr tramite CDN',
     'OK'
   ]
 }
@@ -31,7 +31,7 @@ const en = {
   social: ['Contact me on instagram', 'Contact me on linkedin'],
   legal: [
     'Transparency of collected data',
-    'This site uses only technical cookies and Google Fonts via Google CDN',
+    'This site uses only technical cookies, Google Fonts and jsDelivr via CDN',
     'OK'
   ]
 }
