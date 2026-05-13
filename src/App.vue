@@ -7,11 +7,7 @@
       <Contatti></Contatti>
     </span>
 
-    <cookiePrivacy 
-      v-if="!hasChosen"
-      class="law"
-      @privacy="handleConsent"
-    />
+    <cookiePrivacy v-if="!hasChosen" class="law" @privacy="handleConsent" />
   </div>
 </template>
 
@@ -28,9 +24,8 @@ const Work = defineAsyncComponent(() => import('@/view/WorkPage.vue'))
 const Vita = defineAsyncComponent(() => import('@/view/VitaPersonale.vue'))
 const Contatti = defineAsyncComponent(() => import('@/view/ContattiLorenzo.vue'))
 
-const handleConsent = (accepted: boolean) => {
+const handleConsent = () => {
   hasChosen.value = true
-  document.cookie = `policyAccept=${accepted}; path=/; max-age=${60 * 60 * 24 * 365}`
 }
 </script>
 
