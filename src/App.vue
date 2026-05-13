@@ -31,36 +31,6 @@ const Contatti = defineAsyncComponent(() => import('@/view/ContattiLorenzo.vue')
 const handleConsent = (accepted: boolean) => {
   hasChosen.value = true
   document.cookie = `policyAccept=${accepted}; path=/; max-age=${60 * 60 * 24 * 365}`
-
-  if (accepted) {
-    ;(window as any).clarity('consentv2', {
-      ad_storage: "granted",
-      analytics_storage: "granted"
-    })
-  } else {
-    ;(window as any).clarity('consentv2', {
-      ad_storage: "denied",
-      analytics_storage: "denied"
-    })
-    ;(window as any).clarity('consent', false)
-  }
-}
-
-// Inizializza Clarity solo se l'utente ha già fatto una scelta in precedenza
-const cookies = document.cookie
-if (cookies.includes('policyAccept=true')) {
-  hasChosen.value = true
-  ;(window as any).clarity('consentv2', {
-    ad_storage: "granted",
-    analytics_storage: "granted" 
-  })
-} else if (cookies.includes('policyAccept=false')) {
-  hasChosen.value = true
-  ;(window as any).clarity('consentv2', {
-    ad_storage: "denied",
-    analytics_storage: "denied"
-  })
-  ;(window as any).clarity('consent', false)
 }
 </script>
 
