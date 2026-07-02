@@ -1,0 +1,8 @@
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: true
+minimumReleaseAge: 28000
+minimumReleaseAgeExclude:
+  - undici@7.28.0
+overrides:
+  "undici": "7.28.0"

@@ -31,7 +31,7 @@
     "@vitejs/plugin-vue": "6.0.6",
     "@vue/eslint-config-prettier": "10.2.0",
     "@vue/eslint-config-typescript": "14.7.0",
-    "@vue/test-utils": "^2.4.6",
+    "@vue/test-utils": "^2.4.11",
     "@vue/tsconfig": "0.9.1",
     "eslint": "10.2.1",
     "eslint-plugin-vue": "10.8.0",
@@ -40,17 +40,8 @@
     "prettier": "3.8.3",
     "sass": "1.99.0",
     "typescript": "6.0.3",
-    "vite": "8.0.8",
+    "vite": "8.0.16",
     "vitest": "4.1.4",
     "vue-tsc": "3.2.6"
-  },
-  "pnpm": {
-    "overrides": {
-      "minimatch": "10.2.5",
-      "flatted": "3.4.2",
-      "picomatch": "4.0.4",
-      "brace-expansion": "2.1.0",
-      "postcss": "8.5.10"
-    }
   }
 }
