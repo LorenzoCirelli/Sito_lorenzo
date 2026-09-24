@@ -7,6 +7,7 @@ import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import it from '@/assets/it.json'
 import en from '@/assets/en.json'
+import { setWasmUrl } from '@lottiefiles/dotlottie-vue'
 const locale = navigator.language
 dayjs.locale(locale)
 dayjs.extend(relativeTime)
@@ -19,6 +20,9 @@ const i18n = createI18n({
     it: it
   }
 })
+
+
+setWasmUrl('/dotlottie-player.wasm')
 
 app.use(i18n)
 
